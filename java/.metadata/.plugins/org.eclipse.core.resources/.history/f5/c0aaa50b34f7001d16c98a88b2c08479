@@ -1,0 +1,21 @@
+class User{
+	String name;
+	String email;
+	String phone;
+	
+	User() {
+		name = "";
+		email = "";
+		phone = "";
+		System.out.println("User object constructed");
+	}
+}
+
+public class ThisDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

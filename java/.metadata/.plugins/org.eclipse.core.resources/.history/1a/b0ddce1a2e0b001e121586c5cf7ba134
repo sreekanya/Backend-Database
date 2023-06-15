@@ -1,0 +1,7 @@
+
+abstract class BatchNotification {
+	abstract String toString();
+	abstract void morningBatch(); 
+	
+	abstract void eveningBatch();
+}

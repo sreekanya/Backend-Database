@@ -1,0 +1,6 @@
+
+abstract class Batch {
+	public void morningBatch1();
+	public void eveningBatch2();
+
+}

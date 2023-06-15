@@ -1,0 +1,83 @@
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+class MovieTicket{
+	
+	String movieName;
+	String seatNumber;
+	boolean isTicketBooked;
+	String emailUser;
+	static int ticketNumber = 1;
+	
+	public MovieTicket() {
+
+	}
+
+	public MovieTicket(String movieName, String seatNumber, boolean isTicketBooked, String emailUser) {
+		super();
+		this.movieName = movieName;
+		this.seatNumber = seatNumber;
+		this.isTicketBooked = isTicketBooked;
+		this.emailUser = emailUser;
+	}
+
+	@Override
+	public String toString() {
+		return "MovieTicket [movieName=" + movieName + ", seatNumber=" + seatNumber + ", isTicketBooked="
+				+ isTicketBooked + ", emailUser=" + emailUser + "]";
+	}
+	
+	
+}
+class MovieTicketBookingTask implements Callable<String>{
+	
+	MovieTicket ticket;
+	
+	public MovieTicketBookingTask(MovieTicket ticket) {
+		this.ticket = ticket;
+	}
+
+	@Override
+	public String call() throws Exception {
+		System.out.println("Paying for the Ticket seat "+ticket.seatNumber+" for user "+ticket.emailUser);
+		Thread.sleep(3000);
+		ticket.seatNumber = "A"+MovieTicket.ticketNumber++;
+		
+		ticket.isTicketBooked = true;
+		System.out.println("Ticket Booked for  "+ticket.emailUser);
+		return "Ticket Booked for "+ticket.emailUser+" with seat number "+ticket.seatNumber;
+	}
+	
+}
+
+public class CallableFutureApp {
+
+	public static void main(String[] args) {
+		System.out.println("Movie Ticket Booking App Started");
+		
+		MovieTicket ticket1 = new MovieTicket("Avengers", "A1", false, "john@example.com");
+		MovieTicket ticket2 = new MovieTicket("Avengers", "A2", false, "jim@example.com");
+		MovieTicket ticket3 = new MovieTicket("Avengers", "A3", false, "jake@example.com");
+		MovieTicket ticket4 = new MovieTicket("Avengers", "A4", false, "james@example.com");
+		MovieTicket ticket5 = new MovieTicket("Avengers", "A5", false, "johnny@example.com");
+		
+		System.out.println("MovieTicket1 : "+ticket1);
+		System.out.println("MovieTicket2 : "+ticket2);
+		System.out.println("MovieTicket3 : "+ticket3);
+		System.out.println("MovieTicket4 : "+ticket4);
+		System.out.println("MovieTicket5 : "+ticket5);
+		System.out.println("Processor "+Runtime.getRuntime().availableProcessors());
+		
+		ExecutorService service = Executors.newFixedThreadPool(2);
+		
+		Callable task1 = new MovieTicketBookingTask(ticket1);
+		Callable task2 = new MovieTicketBookingTask(ticket2);
+		Callable task3 = new MovieTicketBookingTask(ticket3);
+		Callable task4 = new MovieTicketBookingTask(ticket4);
+		Callable task5 = new MovieTicketBookingTask(ticket5);
+		
+		System.out.println("Movie Ticket Booking App Finished");
+	}
+
+}

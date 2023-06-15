@@ -1,0 +1,28 @@
+interface PaytmPaymentGateway{
+	
+}
+
+interface RazonPay{
+	
+}
+
+interface Paypal{
+	
+}
+
+class MyPaymentPage implements PaytmPaymentGateway,RazonPay, Paypal{
+	
+	
+}
+
+interface Notification{
+	void notifyMessage(String message);
+}
+public class InterfaceDemo {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

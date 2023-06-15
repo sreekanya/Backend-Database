@@ -1,0 +1,11 @@
+
+public class MultiThreading {
+
+	public static void main(String[] args) {
+		System.out.println("Main Thread Started");
+		
+		System.out.println("Main Thread Finished");
+
+	}
+
+}

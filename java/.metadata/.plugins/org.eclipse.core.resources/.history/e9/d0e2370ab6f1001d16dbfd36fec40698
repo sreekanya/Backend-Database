@@ -1,0 +1,20 @@
+package session4;
+
+import java.util.Scanner;
+
+public class anIfElseCondition {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Enter amount : ");
+		double amount = scanner.nextDouble();
+		
+		System.out.println("Enter promocode : ");
+		int promocode = scanner.nextInt();
+		
+		System.out.println("Amount = "+amount +"promocode = "+promocode);
+
+	}
+
+}

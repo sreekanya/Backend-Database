@@ -1,0 +1,11 @@
+
+public class FitnessCenter extends Notification{
+	Participants participant;
+	
+	void studentEnrollment(Participants participant) {
+		this.participant = participant;
+		String msg = participant.toString();
+		System.out.println(msg +" Successfully enrolled in Yamin Gym");
+	}
+	
+}

@@ -1,0 +1,38 @@
+package session4;
+
+import java.util.Scanner;
+
+public class anIfElseCondition {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Enter amount : ");
+		double amount = scanner.nextDouble();
+		
+		System.out.println("Enter promocode : ");
+		int promocode = scanner.nextInt();
+		
+		scanner.close();
+		
+		System.out.println("Amount = "+amount +"promocode = "+promocode);
+		
+		if(promocode == 1001) {
+			System.out.println("Promocode applied.");
+			if(amount >= 1000) {
+				double discount = 0.25*amount;
+				System.out.println("Discount amount = "+discount);
+				System.out.println("Final amount = "+(amount-discount));
+			}
+			else {
+				System.out.println("Amount is less can't apply discount");
+				System.out.println("Final amount = "+amount);
+			}
+		}
+		else {
+			System.out.println("Invalid promo code");
+		}
+
+	}
+
+}

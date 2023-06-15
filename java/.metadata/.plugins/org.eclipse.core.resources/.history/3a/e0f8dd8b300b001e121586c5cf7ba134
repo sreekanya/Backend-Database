@@ -1,0 +1,14 @@
+
+public class FitnessCenter {
+	
+	
+	void studentEnrollment() {
+		System.out.println("Successfully enrolled in Yamin Gym");
+	}
+	
+//	 void studentEnrollment(BatchNotification bnf) {
+//		this.batchnf = bnf;
+//		this.batchnf.toString();
+//	}
+	
+}

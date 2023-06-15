@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class YaminGym {
+
+	public static void main(String[] args) {
+		
+		FitnessCenter fitnessCenter = new FitnessCenter();
+		
+		System.out.println("Please Register the Participant details");
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Enter First Name");
+		String fName = scanner.nextLine();
+		
+		System.out.println("Enter Last Name");
+		String lName = scanner.nextLine();
+		
+		System.out.println("Enter Email");
+		String email = scanner.nextLine();
+		
+		System.out.println("Enter Phone");
+		String phone = scanner.nextLine();
+		
+		System.out.println("Enter Batch Morning/Evening :");
+		String batch = scanner.nextLine();
+		
+		scanner.close();
+		
+		Participants participant = new Participants(fName, lName,email,phone,batch);
+		
+		
+		if(batch.toUpperCase() == "MORNING")
+		{
+			
+			System.out.println("Evening");
+			//fitnessCenter.enrollmentMorning(participant);
+			participant.eveningBatch();
+		}
+		else {
+			//fitnessCenter.enrollmentEvening(participant);
+			System.out.println("Morning");
+			participant.morningBatch();
+		}
+		
+		
+
+	}
+
+}

@@ -1,0 +1,107 @@
+import java.util.Date;
+
+interface Plan{
+	String getPlanName();
+	int getPlanPrice();
+	
+	default void purchase(int amount) {
+		if(amount == getPlanPrice()) {
+			System.out.println("Purchasing the plan : "+getPlanName());
+			System.out.println("Plan Purchased Successfully for the amount value "+amount);
+			onPurchase("Plan Activated from : "+ new Date());
+		}
+		else {
+			System.out.println("Plan Purchase Failed...Amount mismatched");
+		}
+	}
+	void onPurchase(String message);
+}
+
+class Plan3G implements Plan{
+
+	@Override
+	public String getPlanName() {
+		return "Unlimited Plan3G";
+	}
+
+	@Override
+	public int getPlanPrice() {
+		return 250;
+	}
+
+	@Override
+	public void onPurchase(String message) {
+		System.out.println("[Message]  "+message);
+		
+	}
+	
+}
+class Plan4G implements Plan{
+
+	@Override
+	public String getPlanName() {
+		return "Truly Unlimited Plan4G";
+	}
+
+	@Override
+	public int getPlanPrice() {
+		return 450;
+	}
+
+	@Override
+	public void onPurchase(String message) {
+		System.out.println("[Message]  "+message);
+		
+	}
+	
+}
+
+class Plan5G implements Plan{
+
+	@Override
+	public String getPlanName() {
+		return "Nolimits Plan5G";
+	}
+
+	@Override
+	public int getPlanPrice() {
+		return 750;
+	}
+
+	@Override
+	public void onPurchase(String message) {
+		System.out.println("[Message]  "+message);
+		
+	}
+	
+}
+
+class PlanFactory {
+	public static Plan getPlan(int typeofPlan) {
+		Plan plan = null;
+		
+		if(typeofPlan == 3) {
+			plan = new Plan3G();
+		}
+		else if(typeofPlan ==4) {
+			plan = new Plan4G();
+		}
+		else if(typeofPlan == 5) {
+			plan = new Plan5G();
+		}
+		else {
+			System.out.println("Invalid type of plan");
+		}
+		return plan;
+	}
+	
+}
+public class FactoryDesignPattern {
+
+	public static void main(String[] args) {
+		Plan plan = PlanFactory.getPlan(7);
+		plan.purchase(250);
+
+	}
+
+}

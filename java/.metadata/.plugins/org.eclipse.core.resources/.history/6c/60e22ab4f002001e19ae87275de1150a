@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+
+public class ArrayListDemo {
+
+	public static void main(String[] args) {
+		
+		int num[] = {10,4,5,6};
+		
+		ArrayList<String> list = new ArrayList<String>();
+		list.add(10);
+		list.add("John");
+		list.add("Sam");
+	}
+
+}

@@ -1,0 +1,21 @@
+class InvalidPhonenumberException extends Exception{
+	
+	public InvalidPhonenumberException(String message) {
+		System.out.println(message);
+	}
+}
+
+class InvalidEmailException extends RuntimeException{
+	
+	public InvalidEmailException(String message) {
+		System.out.println(message);
+	}
+}
+public class CustomExcept {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

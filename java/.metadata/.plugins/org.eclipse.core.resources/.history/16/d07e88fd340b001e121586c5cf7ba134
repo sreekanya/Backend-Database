@@ -1,0 +1,7 @@
+
+public class Notification {
+	void batchNotification() {
+		
+	}
+
+}

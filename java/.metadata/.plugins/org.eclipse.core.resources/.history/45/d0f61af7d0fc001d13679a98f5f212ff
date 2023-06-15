@@ -1,0 +1,50 @@
+interface State{
+	String getState();
+	
+}
+class Placed implements State{
+
+	@Override
+	public String getState() {
+		return "PLACED";
+	}
+	
+}
+class Shipped implements State{
+
+	@Override
+	public String getState() {
+		return "SHIPPED";
+	}
+	
+}
+class Delivered implements State{
+
+	@Override
+	public String getState() {
+		return "DELIVERED";
+	}
+	
+}
+
+class Order{
+	
+	State state;
+	
+	Order(){
+		state = new Placed();
+	}
+	
+	void updateState(State newState) {
+		state = newState;
+	}
+}
+
+public class StateDesignPattern {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

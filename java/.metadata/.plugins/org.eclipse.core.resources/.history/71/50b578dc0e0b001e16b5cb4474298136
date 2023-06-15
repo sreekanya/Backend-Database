@@ -1,0 +1,10 @@
+
+abstract class BatchNotification {
+
+	public void morningBatch(String fName,String lName) {
+		System.out.println("Student "+fName + lName +" Registered for morning classes");
+	}
+	public void eveningBatch(String fName,String lName) {
+		System.out.println("Student "+fName+ lName +" Registered for morning classes");
+	}
+}

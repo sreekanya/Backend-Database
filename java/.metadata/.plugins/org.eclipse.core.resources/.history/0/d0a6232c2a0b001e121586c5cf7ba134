@@ -1,0 +1,7 @@
+
+abstract class BatchNotification {
+
+	abstract void morningBatch(String fName,String lName); 
+	
+	abstract void eveningBatch(String fName,String lName);
+}

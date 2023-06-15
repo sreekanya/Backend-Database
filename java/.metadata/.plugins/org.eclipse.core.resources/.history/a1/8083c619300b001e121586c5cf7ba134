@@ -1,0 +1,13 @@
+
+public class FitnessCenter {
+	
+	void studentEnrollment() {
+		
+	}
+	
+//	 void studentEnrollment(BatchNotification bnf) {
+//		this.batchnf = bnf;
+//		this.batchnf.toString();
+//	}
+	
+}

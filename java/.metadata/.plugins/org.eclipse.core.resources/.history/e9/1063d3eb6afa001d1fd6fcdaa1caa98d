@@ -1,0 +1,23 @@
+abstract class PaytmPaymetGateway{
+	
+	private boolean isBankInterfaceUp = true;
+	
+	void pay(int amount) {
+		if(isBankInterfaceUp) {
+			System.out.println("[Paytm] payment successfullt done for Amount "+ amount);
+		}
+		else {
+			System.out.println("[Paytm] payment failed ..... Please try again later");
+		}
+	}
+	
+}
+
+public class PaymentApp {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

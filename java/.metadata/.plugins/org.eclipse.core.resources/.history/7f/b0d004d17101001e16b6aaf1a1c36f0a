@@ -1,0 +1,34 @@
+class Printer{
+	String status = "Available";
+	void printDocument(String docName, int copies) {
+		
+		status = "Busy";
+		System.out.println("[Printer] Printing the document ----"+docName);
+		
+		for(int i=0;i<copies;i++) {
+			System.out.println("[Printer] "+docName+" copy ##"+i);
+		}
+		
+		try {
+			Thread.sleep(5000);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		status = "Available";
+	}
+	
+	void showPrinterStatus() {
+		System.out.println("Printer status: "+status);
+	}
+}
+
+public class SynchronizationApp {
+
+	public static void main(String[] args) {
+		Printer printer = new Printer();
+		printer.showPrinterStatus();
+		printer.printDocument("LearningJava.pdf", 10);
+		printer.showPrinterStatus();
+	}
+
+}

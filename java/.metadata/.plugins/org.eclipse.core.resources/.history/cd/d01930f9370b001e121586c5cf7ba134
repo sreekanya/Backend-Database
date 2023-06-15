@@ -1,0 +1,19 @@
+
+abstract class Notification {
+	abstract void batchNotification(); 
+
+}
+
+class MorningBatch extends Notification {
+	void batchNotification() {
+		System.out.println("You are enrolled for the Morning sessions");
+	}
+	
+}
+
+class EveningBatch extends Notification {
+	void batchNotification() {
+		System.out.println("You are enrolled for the Evening sessions");
+	}
+	
+}

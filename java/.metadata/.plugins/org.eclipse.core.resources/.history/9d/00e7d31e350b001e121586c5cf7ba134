@@ -1,0 +1,16 @@
+
+public class FitnessCenter {
+	Participants participant;
+	
+	void studentEnrollment(Participants participant) {
+		this.participant = participant;
+		String msg = participant.toString();
+		System.out.println(msg +" Successfully enrolled in Yamin Gym");
+	}
+	
+//	 void studentEnrollment(BatchNotification bnf) {
+//		this.batchnf = bnf;
+//		this.batchnf.toString();
+//	}
+	
+}

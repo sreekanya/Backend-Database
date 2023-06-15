@@ -1,0 +1,19 @@
+class Cab{
+	int baseFare = 0;
+	Cab(){
+		baseFare = 20;
+		System.out.println("Cab object constructed");
+	}
+	void bookCab(String from, String to) {
+		System.out.println("Cab booked from "+from +" to "+to +"location. Please pay "+baseFare);
+	}
+	
+}
+public class RunTimePoly {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

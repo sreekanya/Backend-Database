@@ -1,0 +1,18 @@
+abstract class PaytmPaymetGateway{
+	
+	private boolean isBankInterfaceUp = true;
+	
+	void pay(int amount) {
+		
+	}
+	
+}
+
+public class PaymentApp {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

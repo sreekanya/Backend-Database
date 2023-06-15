@@ -1,0 +1,25 @@
+class User{
+	static int objectSrlNnumber = 0;
+	
+	String name;
+	String email;
+	String phone;
+	
+	User() {
+		name = "";
+		email = "";
+		phone = "";
+		System.out.println("User object constructed with serialnumber :"+objectSrlNumber);
+	}
+}
+
+public class ThisDemo {
+
+	public static void main(String[] args) {
+		User userr1 = new User();
+		User userr2 = new User();
+		
+
+	}
+
+}

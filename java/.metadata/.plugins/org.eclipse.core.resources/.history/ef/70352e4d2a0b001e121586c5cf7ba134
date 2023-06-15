@@ -1,0 +1,45 @@
+
+public class Participants extends BatchNotification  {
+	String studentFName;
+	String studentLName;
+	String studentEmail;
+	String studentPhone;
+	String batchTime;
+	
+	public Participants() {
+		
+	}
+	
+	public Participants(String studentFName, String studentLName, String studentEmail, String studentPhone,String batchTime) {
+		
+		this.studentFName = studentFName;
+		this.studentLName = studentLName;
+		this.studentEmail = studentEmail;
+		this.studentPhone = studentPhone;
+		this.batchTime = batchTime;
+		
+	}
+
+	@Override
+	public String toString() {
+		return "Participants [studentFName=" + studentFName + ", studentLName=" + studentLName + ", studentEmail="
+				+ studentEmail + ", studentPhone=" + studentPhone + ", batchTime=" + batchTime + "]";
+	}
+
+	@Override
+	void morningBatch() {
+		System.out.println("Student "+this.fName+this.lName +" Registered for Morning classes");
+		
+	}
+
+	@Override
+	void eveningBatch() {
+		System.out.println("Student "+this.fName+ this.lName +" Registered for Evening classes");
+		
+	}
+
+	
+	
+
+	
+}

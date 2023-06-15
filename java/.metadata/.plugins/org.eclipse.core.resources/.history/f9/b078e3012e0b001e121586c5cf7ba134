@@ -1,0 +1,7 @@
+
+abstract class BatchNotification {
+	abstract void studentInfo();
+	abstract void morningBatch(); 
+	
+	abstract void eveningBatch();
+}

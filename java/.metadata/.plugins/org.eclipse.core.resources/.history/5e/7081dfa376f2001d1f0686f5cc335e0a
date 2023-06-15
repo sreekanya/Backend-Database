@@ -1,0 +1,12 @@
+package session11;
+
+public class StringMethods {
+
+	public static void main(String[] args) {
+		String names = "James Smith Joe Tommy";
+		System.out.println("length of the name :"+names.length());
+		System.out.println("char at index 6 :"+names.charAt(6));
+		System.out.println("Index of Joe  :"+names.indexOf('J'));
+	}
+
+}

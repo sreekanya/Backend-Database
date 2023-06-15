@@ -1,0 +1,58 @@
+interface PaytmPaymentGateway{
+	
+}
+
+interface RazonPay{
+	
+}
+
+interface Paypal{
+	
+}
+
+class MyPaymentPage implements PaytmPaymentGateway,RazonPay, Paypal{
+	
+	
+}
+
+interface Notification{
+	void notifyMessage(String message);
+}
+
+interface ElectricityBillPayment{
+	int bullAccNumber = 12345;
+	void billGenerated();
+	void payBillNotification();
+}
+class User implements Notification,ElectricityBillPayment{
+	@Override
+	public void notifyMessage(String message) {
+		System.out.println("A new notification message ......."+message);
+		
+	}
+	@Override
+	public void billGenerated() {
+		System.out.println("Electricity Bill Generated . Please Pay intime");
+		
+	}
+	@Override
+	public void payBillNotification() {
+		System.out.println("Thank you for paying the bill");
+		
+	}
+}
+class ElectricityApp{
+	ElectricityBillPayment payment;
+	
+	void subscribeForBill(ElectricityBillPayment payment) {
+		
+	}
+}
+public class InterfaceDemo {
+
+	public static void main(String[] args) {
+		System.out.println("Bill Account number "+ElectricityBillPayment.bullAccNumber);
+
+	}
+
+}

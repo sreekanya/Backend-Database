@@ -1,0 +1,13 @@
+//import java.util.Scanner;
+
+public class FitnessCenter {
+	
+	BatchNotification batchnf;
+	void enrollmentMorning(BatchNotification bnf) {
+		this.batchnf = bnf;
+	}
+	
+	void enrollmenEvening(BatchNotification bnf) {
+		this.batchnf = bnf;
+	}
+}

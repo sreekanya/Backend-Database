@@ -1,0 +1,16 @@
+class Printer{
+	void printDocument(String docName, int copies) {
+		System.out.println("[Printer] Printing the document ----"+docName);
+	}
+	
+	
+}
+
+public class SynchronizationApp {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

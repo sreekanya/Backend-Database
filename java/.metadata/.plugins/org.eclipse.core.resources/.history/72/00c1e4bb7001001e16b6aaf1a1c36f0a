@@ -1,0 +1,18 @@
+class Printer{
+	void printDocument(String docName, int copies) {
+		System.out.println("[Printer] Printing the document ----"+docName);
+		
+		for(int i=0;i<copies;i++) {
+			System.out.println("[Printer] "+docName+" copy ##"+i);
+		}
+	}
+}
+
+public class SynchronizationApp {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

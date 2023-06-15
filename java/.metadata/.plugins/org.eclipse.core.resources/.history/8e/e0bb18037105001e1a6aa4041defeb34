@@ -1,0 +1,37 @@
+class MovieTicket{
+	
+	String movieName;
+	String seatNumber;
+	boolean isTicketBooked;
+	String emailUser;
+	
+	public MovieTicket() {
+
+	}
+
+	public MovieTicket(String movieName, String seatNumber, boolean isTicketBooked, String emailUser) {
+		super();
+		this.movieName = movieName;
+		this.seatNumber = seatNumber;
+		this.isTicketBooked = isTicketBooked;
+		this.emailUser = emailUser;
+	}
+
+	@Override
+	public String toString() {
+		return "MovieTicket [movieName=" + movieName + ", seatNumber=" + seatNumber + ", isTicketBooked="
+				+ isTicketBooked + ", emailUser=" + emailUser + "]";
+	}
+	
+	
+}
+
+public class CallableFutureApp {
+
+	public static void main(String[] args) {
+		System.out.println("Movie Ticket App Booking Started");
+		
+		System.out.println("Movie Ticket App Booking Ended");
+	}
+
+}

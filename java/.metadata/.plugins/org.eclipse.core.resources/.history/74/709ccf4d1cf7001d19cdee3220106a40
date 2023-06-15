@@ -1,0 +1,25 @@
+class Parent{
+	String fname;
+	String lname;
+	int wealth;
+	
+	Parent() {
+		fname = "John";
+		lname = "Marry";
+		wealth = 100000;
+		System.out.println("[Parent] -- object constructed with default parameters");
+	}
+	void showDetails() {
+		System.out.println("[Parent] Details are : "+fname +lname+" wealth :"+wealth);
+	}
+	
+}
+
+public class WhatIsInheritance {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

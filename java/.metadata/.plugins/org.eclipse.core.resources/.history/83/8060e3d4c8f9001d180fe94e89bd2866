@@ -1,0 +1,29 @@
+class Cab{
+	int baseFare = 0;
+	Cab(){
+		baseFare = 20;
+		System.out.println("Cab object constructed");
+	}
+	void bookCab(String from, String to) {
+		System.out.println("Cab booked from "+from +" to "+to +"location. Please pay $"+baseFare);
+	}
+	
+}
+
+class MiniCab extends Cab{
+	
+}
+class SharedCab extends Cab{
+	
+}
+class LuxuryCab extends Cab{
+	
+}
+public class RunTimePoly {
+
+	public static void main(String[] args) {
+		Cab cab = new Cab();
+		cab.bookCab("Home", "Office");
+	}
+
+}

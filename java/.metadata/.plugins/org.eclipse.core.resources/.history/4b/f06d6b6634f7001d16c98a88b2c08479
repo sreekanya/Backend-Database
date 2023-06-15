@@ -1,0 +1,22 @@
+class User{
+	String name;
+	String email;
+	String phone;
+	
+	User() {
+		name = "";
+		email = "";
+		phone = "";
+		System.out.println("User object constructed");
+	}
+}
+
+public class ThisDemo {
+
+	public static void main(String[] args) {
+		User userr1 = new User();
+		User userr2 = new User();
+
+	}
+
+}

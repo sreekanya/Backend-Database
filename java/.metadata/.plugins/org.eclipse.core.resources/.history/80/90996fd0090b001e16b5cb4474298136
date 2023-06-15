@@ -1,0 +1,10 @@
+
+abstract class Batch {
+	public void morningBatch1(String fName,String lName) {
+		System.out.println("Student "+fName,lName +" Registered for morning classes");
+	}
+	public void eveningBatch2(String fName,String lName) {
+		System.out.println("Student "+fName,lName +" Registered for morning classes");
+	}
+
+}

@@ -1,0 +1,38 @@
+abstract class PaytmPaymetGateway{
+	
+	private boolean isBankInterfaceUp = true;
+	
+	void pay(int amount) {
+		if(isBankInterfaceUp) {
+			System.out.println("[Paytm] payment successfullt done for Amount "+ amount);
+		}
+		else {
+			System.out.println("[Paytm] payment failed ..... Please try again later");
+		}
+	}
+	
+	abstract void onSuccess(String message);
+	abstract void onFailure(String message);
+	
+}
+class EstorePayments extends PaytmPaymetGateway{
+	void onSuccess(String message) {
+		System.out.println(message);
+		System.out.println("[Estore] Thank you for shopping with us....\n Item will be dispatched soon");
+	}
+	void onFailure(String message) {
+		System.out.println(message);
+		System.out.println("[Estore] Something went wrong...... Please try again later :)");
+	}
+	
+}
+
+public class PaymentApp {
+
+	public static void main(String[] args) {
+		EstorePayments estorepayments = new EstorePayments();
+		estorepayments.pay(5000);
+
+	}
+
+}

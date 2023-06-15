@@ -1,0 +1,19 @@
+package session6;
+
+public class CovidCases {
+
+	public static void main(String[] args) {
+		String countryNames[] = {"USA","India","China","Japan"};
+		int totalCases = 0;
+		int recovedCases = 1;
+		int activeCases = 2;
+		int[][] covidCases = {
+				{2345,234,45},
+				{345,235,290},
+				{4566,3456,234},
+				{2445,456,1234}
+		}
+
+	}
+
+}
