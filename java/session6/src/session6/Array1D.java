@@ -1,0 +1,18 @@
+package session6;
+
+public class Array1D {
+
+	public static void main(String[] args) {
+		int array1[] = {13,2,4,5};
+		int[] array2 = {19,6,30,56};
+		for(int i=0 ;i<array2.length;i++) {
+			System.out.println("array2"+array2[i]);
+		}
+		int array5[] = new int[5];
+		for(int i=0 ;i<array5.length;i++) {
+			System.out.println("array5"+array5[i]);
+		}
+		
+	}
+
+}
