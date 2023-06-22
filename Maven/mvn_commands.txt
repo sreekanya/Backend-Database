@@ -1,0 +1,121 @@
+
+archetype:generate //to generate the maven project
+groupID:com.example //company name in reverse order
+artifactId:cms //  the application name
+archetypeArtifactId=maven-archetype-quickstart // choosing the project structure quickstart/webapp
+archetypeVersion=1.4 
+interactiveMode=false
+
+To Generate a maven quick start project
+###############################################
+mvn archetype:generate -DgroupId=com.example.cms -DartifactId=cms -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+
+
+To Generate a maven web project
+####################################
+mvn archetype:generate -DgroupId=com.example.cms-web -DartifactId=cms-web -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+
+To build package
+##################
+mvn package
+
+To Execute jar file
+######################
+java -cp target/cms-1.0-SNAPSHOT.jar com.example.cms.App
+
+
+Maven is a plugin execution framework.
+--------------------------------------------
+
+1. clean plugin will cleanup after the build.
+    * mvn clean
+    * mvn clean -Dmaven.clean.skip=true // will skip the removing of target folder.
+    * other way is <configuration><skip>true</skip></configuration> can be added in the pom.xml file to skip 
+    * to include or exclude any directories and files while cleanup need to mention under <configuration> target
+        <filesets>
+            <fileset>
+                <directory>***mention path***</directory>
+                <includes><include>**/*.log</include></includes>
+                <excludes><exclude>**/*.tmp</exclude></excludes>
+            </fileset>
+        </filesets>
+    * mvn clean -Dmaven.clean.failOnError=false // skip the failure errors
+    *other way is to add <failOnError>false</failOnError> under configuration tag.
+
+2. maven compiler plugin has 2 goals.
+        a. compile
+        b. test-compile
+    1. To know the compilation time error messages add <verbose>true</verbose> under <configuration> tag under compiler plugin.
+        can give <source>1.8</source><target>1.8</target> for java 1.8 error notificatins after verbose under configuration.
+        <configuration>
+            <verbose>true</verbose>
+            <source>1.8</source>
+            <target>1.8</target>
+        </configuration>
+    2. To use other JDK need to use under configuration tag.
+        <fork>true</fork>
+        <executable>path to JDK</executable>
+        <compilerVersion>1.3</compilerVersion>
+
+    3. For the memory allocation and enhancements
+        <fork>true</fork>   //to enforce the commands
+        <meminitial>256m</meminitial>
+        <maxmem>512m</maxmem>
+
+    4. For java compilation lint errors can give
+        javac App.java -Xlint:All /none/name   //to enables all warnings /none/ or can give name
+        otherwise can give in pom.xml 
+        <compilerArgs>
+            <arg>-verbose</arg>
+            <arg>-Xlint:all</arg>
+        </compilerArgs>
+
+3.  surefire plugin responsible for unit testing
+        1.To skip test to run <skipTests> tag is used under configuration.
+            <configuration>
+                <skipTests>true</skipTests>
+            </configuration>
+            otherwise "mvn test -DskipTest=true "    //to skip tests through commind line
+        2.To include or exclude the tests in configuration
+            <configuration>
+                <excludes>test file name</excludes>
+                <includes>test file name</includes>
+            </configuration>
+        3. To run single test
+            mvn test -Dtest=AppTest   //which is test file
+            mvn test -Dtest=AppTest#promocode  //to run specific test case method.
+            mvn test -Dtest=AppTest,Message    // to run multiple test files
+        4. requires security manager required for jUnit3
+            <systemPropertyVariables>
+                <surefire.security.manager>java.lang.SecurityManager</surefie.security.manager>
+            </systemPropertyVariables>
+        5. To run tests in parallel Junit4.7 tests can be executed in parallel
+            <parallel>methods</parallel>
+            <threadCount>10</threadCount>    //10 parallel threads can be executed
+
+############################################################################################
+
+Maven local repository, central repository and remote repository
+
+    to find local repository will be with name "m2" // all the dependcies will get synced in the repository.
+
+    mvn help:evaluate -Dexpression=settings.localRepository
+
+    mvn install   //to create local repository
+
+    To change the local repository path 
+            cd /etc/maven/settings.xml
+
+    the dependcies which are not find in the local repository will get from central repository
+        repo.maven.apache.org/maven2 or search.maven.org
+        for the central repository configuration type super POM in google
+
+    To configure remote repositories
+    inside pom.xml 
+        <repositories>
+            <repository>
+                <id>jboss-repo</id>
+                <url>url</url>
+            </repository>
+        </repositories>
