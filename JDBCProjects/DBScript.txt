@@ -1,0 +1,20 @@
+Create Database YaminGym;
+
+Use YaminGym;
+
+Create Table Batch(
+    batchId int primary key auto_increment,
+	timeSlot time,
+	totalslots int,
+	availslots int
+);
+
+Create Table Participants(
+    pid int primary key auto_increment,
+	studentFName varchar(50),
+	studentLName varchar(50),
+	studentEmail varchar(25),
+	studentPhone varchar(10),
+	batchId int,
+    foreign key(batchId) References Batch(batchId)
+);
