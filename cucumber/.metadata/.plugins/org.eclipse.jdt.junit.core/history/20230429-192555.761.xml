@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AppTest" project="estore" tests="2" started="2" failures="0" errors="1" ignored="0">
+  <testsuite name="steps.AppTest" time="0.109">
+    <testsuite name="feature to validate the login flow for estore app" time="0.063">
+      <testcase name="validate the login is successful with user credentials" classname="feature to validate the login flow for estore app" time="0.063"/>
+    </testsuite>
+    <testsuite name="feature to check the status of the order for the user" time="0.045">
+      <testcase name="Fetching the state of order for the user" classname="feature to check the status of the order for the user" time="0.045">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'the user has paid for the order using internet banking' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user has paid for the order using internet banking")
+public void the_user_has_paid_for_the_order_using_internet_banking() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user enters email and password in the form")
+public void the_user_enters_email_and_password_in_the_form() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user clicks on the login button")
+public void the_user_clicks_on_the_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the user will be navigated to Home screen")
+public void the_user_will_be_navigated_to_home_screen() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>
