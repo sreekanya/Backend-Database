@@ -1,0 +1,24 @@
+db.users.insertOne(
+    {
+        name:"Fiona",followers:300,email:"fiona@example.com",phone:"+12345678903",
+        address:{addressLine:"123 Merryloop",city:"Milpitas",pincode:"95035" }
+    }
+)
+
+db.users.insertMany(
+[
+    {
+        name:"Dave",followers:30,email:"dave@example.com",phone:"+16784898903",
+        address:{addressLine:"113 Homestead",city:"Cupertino",pincode:"95090" }
+    },
+    {
+        name:"Steve",followers:500,email:"steve@example.com",phone:"+19874567893",
+        address:{addressLine:"3655 Pruneridge ave",city:"santa clara",pincode:"95035" }
+    },
+    {
+        name:"Leo",followers:200,email:"leo@example.com",phone:"+14567397050",
+        address:{addressLine:"456 Hollenbeck",city:"sunnyvale",pincode:"95025" }
+    }
+])
+
+db.users.find({"address.city":"sunnyvale"})
