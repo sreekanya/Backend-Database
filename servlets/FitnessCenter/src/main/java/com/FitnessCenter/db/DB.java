@@ -11,9 +11,9 @@ import com.FitnessCenter.model.Batch;
 import com.FitnessCenter.model.Participants;
 
 public class DB implements DAO{
-	Connection connection;
+	public Connection connection;
 	Statement statement;
-	PreparedStatement preparedStatement;
+	public PreparedStatement preparedStatement;
 	
 	final String TAG = getClass().getPackageName();
 	
