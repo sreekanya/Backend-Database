@@ -3,30 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-	<center>
-		<h3>Enter Details to Add New Participant</h3>
+	<div class="container">
+		<h3 style="text-alilgn:center;">Enter Details to Add New Participant</h3>
 		
 		<form action="Participants" method="post">
-		
-			<label>Enter First Name</label><br />
-			<input type="text" name="txtfname" placeholder="Ex: john" /><br/><br />
-			
-			<label>Enter Last Name</label><br />
-			<input type="text" name="txtlname" placeholder="Ex: watson" /><br/><br/>
-			
-			<label>Enter Email Id</label><br />
-			<input type="text" name="txtemail" placeholder="Ex: john@example.com" /><br/><br />
-			
-			<label>Enter Phone Number</label><br />
-			<input type="text" name="txtphone" placeholder="Ex:1234562345" /><br/><br/>
-			
-			<label>Enter Batch ID</label><br />
-			<input type="text" name="txtbatch" placeholder="Ex:4" /><br/><br/>
-			
-			<input type="submit" value="Add Participant" /><br />
+			<table style="text-align:center;">
+				<tr>
+					<td><label>Enter First Name</label></td>
+					<td><input type="text" name="txtfname" placeholder="Ex: john" /></td>
+				</tr>
+				<tr>
+					<td><label>Enter Last Name</label></td>
+					<td><input type="text" name="txtlname" placeholder="Ex: watson" /></td>
+				</tr>
+				<tr>
+					<td><label>Enter Email Id</label></td>
+					<td><input type="text" name="txtemail" placeholder="Ex: john@example.com" /></td>
+				</tr>
+				<tr>
+					<td><label>Enter Phone Number</label></td>
+					<td><input type="text" name="txtphone" placeholder="Ex:1234562345" /></td>
+				</tr>
+				<tr>
+					<td><label>Enter Batch ID</label></td>
+					<td><input type="text" name="txtbatch" placeholder="Ex:4" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" value="Add Participant" class="btn"/></td>
+				</tr>
+			</table>
 		</form>
-	</center>
+	</div>
 </body>
 </html>
